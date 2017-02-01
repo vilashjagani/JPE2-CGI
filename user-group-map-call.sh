@@ -43,8 +43,11 @@ query_string=$QUERY_STRING;
 EMAILID=`echo $query_string | sed -e 's/\&/ /g' | awk {'print $1'} | sed -e 's/emailid=//g' | sed -e 's/\%40/\@/g' | sed -e 's/\<./\u&/g' | sed -e 's/Ril.Com/ril.com/g'`
 GRPNAME=`echo $query_string | sed -e 's/\&/ /g' | awk {'print $2'}| sed -e 's/grpname=//g'`
 
-if [[ $EMAILID == *"@ril.com" ]]
+mail=`grep $EMAILID cas-emails`
+if [[ -z $mail ]]
 then
+ if [[ $EMAILID == *"@ril.com" ]]
+ then
 
 source /usr/lib/cgi-bin/keystonerc
 TOKEN=`keystone --insecure token-get | grep id | grep -v 'tenant_id'| grep -v 'user_id' |awk {'print $4'}`
@@ -81,7 +84,7 @@ echo "</center>"
 echo "</body>"
 echo "</html>"
 
-else
+ else
       echo "<br>"
       echo "<br>"
       echo "<br>"
@@ -90,6 +93,17 @@ else
       echo "</center>"
       echo "</body>"
       echo "</html>"
-fi
+ fi
+else 
+  echo "<br>"
+  echo "<br>"
+  echo "<br>"
+  echo "<br>"
+  echo "<font color="#229954"> <h2>  $EMAILID is already maped in Group GRP_SUPPORT  </h2> </font> "
+  echo "<font color="#FF0000"> <h2> Don't map CAS users with customers project Groups </h2> </font> "
+  echo "</center>"
+      echo "</body>"
+      echo "</html>"
+ fi 
 > /tmp/ril-mapping.json
 >/tmp/user-group-map-out
