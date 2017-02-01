@@ -1,0 +1,13 @@
+{
+   "user" : {
+      "default_project_id" : "1f97a9046a824278a9c30f6b2d0364dd",
+      "id" : "0293bbc0836e40c18ad15763158e4164",
+      "enabled" : true,
+      "domain_id" : "default",
+      "name" : "mandar.user1",
+      "links" : {
+         "self" : "https://10.144.164.80:5000/v3/users/0293bbc0836e40c18ad15763158e4164"
+      },
+      "enable" : "true"
+   }
+}

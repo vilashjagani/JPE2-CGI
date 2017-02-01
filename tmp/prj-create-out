@@ -1,0 +1,14 @@
+{
+   "project" : {
+      "links" : {
+         "self" : "https://10.144.164.80:5000/v3/projects/9c47021ffcbd4bbdab857715e0498390"
+      },
+      "domain_id" : "default",
+      "is_domain" : false,
+      "id" : "9c47021ffcbd4bbdab857715e0498390",
+      "name" : "mandar",
+      "enabled" : true,
+      "parent_id" : null,
+      "description" : "mandar"
+   }
+}

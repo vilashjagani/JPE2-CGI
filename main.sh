@@ -1,0 +1,28 @@
+#!/bin/bash
+echo "Content-type: text/html"
+echo ""
+
+echo "<html>"
+echo "<title> JPE2 </title>"
+echo "<body bgcolor="#2f2c2b">"
+echo "<center>"
+echo "<h1><font color="#FFC300">JPE2 Projects Managment</font></h1>"
+echo "<h1><hr></h1>"
+echo "<br>"
+echo "<br>"
+echo "<br>"
+echo "<br>"
+echo "<br>"
+#echo "<form action="project.sh">
+#     <input type="submit" value="Projects">
+#     </form>" 
+echo "<a href="project.sh"><button><font size="18">Projects</font></button></a>"
+echo "<br>"
+echo "<br>"
+echo "<a href="group.sh"><button><font size="18">Groups</font></button></a>"
+echo "<br>"
+echo "<br>"
+echo "<a href="main.sh"><button><font size="4">Main</font></button></a>"
+echo "</center>"
+echo "</body>"
+echo "</html>"
